@@ -1,3 +1,14 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [WebApiConfig.cs](./CS/DxSample.Service/App_Start/WebApiConfig.cs) (VB: [WebApiConfig.vb](./VB/DxSample.Service/App_Start/WebApiConfig.vb))
+* [CustomersController.cs](./CS/DxSample.Service/Controllers/CustomersController.cs) (VB: [CustomersController.vb](./VB/DxSample.Service/Controllers/CustomersController.vb))
+* [OrdersController.cs](./CS/DxSample.Service/Controllers/OrdersController.cs) (VB: [OrdersController.vb](./VB/DxSample.Service/Controllers/OrdersController.vb))
+* [Customer.cs](./CS/DxSample.Service/Models/Customer.cs) (VB: [Customer.vb](./VB/DxSample.Service/Models/Customer.vb))
+* [DataContext.cs](./CS/DxSample.Service/Models/DataContext.cs) (VB: [DataContext.vb](./VB/DxSample.Service/Models/DataContext.vb))
+* [Order.cs](./CS/DxSample.Service/Models/Order.cs) (VB: [Order.vb](./VB/DxSample.Service/Models/Order.vb))
+* **[MainForm.cs](./CS/DxSample/MainForm.cs) (VB: [MainForm.vb](./VB/DxSample/MainForm.vb))**
+<!-- default file list end -->
 # How to implement CRUD operations using XtraGrid and OData
 
 
