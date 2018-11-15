@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[MainForm.cs](./CS/XtraGridDataServiceExample.Client/MainForm.cs) (VB: [MainForm.vb](./VB/XtraGridDataServiceExample.Client/MainForm.vb))**
+<!-- default file list end -->
 # How to implement CRUD operations using XtraGrid and OData
 
 
