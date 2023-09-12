@@ -7,317 +7,376 @@
 '     the code is regenerated.
 ' </auto-generated>
 '------------------------------------------------------------------------------
-
 ' Original file name:
 ' Generation date: 6/21/2012 11:30:43 AM
-
-Imports Microsoft.VisualBasic
-Imports System
 Namespace XtraGridDataServiceExample.Client.NorthwindGate
 
-	''' <summary>
-	''' There are no comments for NorthwindEntities in the schema.
-	''' </summary>
-	Partial Public Class NorthwindEntities
-		Inherits System.Data.Services.Client.DataServiceContext
-		''' <summary>
-		''' Initialize a new NorthwindEntities object.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Sub New(ByVal serviceRoot As Global.System.Uri)
-			MyBase.New(serviceRoot)
-			Me.ResolveName = New Global.System.Func(Of Global.System.Type, String)(AddressOf Me.ResolveNameFromType)
-			Me.ResolveType = New Global.System.Func(Of String, Global.System.Type)(AddressOf Me.ResolveTypeFromName)
-			Me.OnContextCreated()
-		End Sub
-		Partial Private Sub OnContextCreated()
-		End Sub
-		''' <summary>
-		''' Since the namespace configured for this service reference
-		''' in Visual Studio is different from the one indicated in the
-		''' server schema, use type-mappers to map between the two.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Protected Function ResolveTypeFromName(ByVal typeName As String) As Global.System.Type
-			If typeName.StartsWith("NorthwindModel", Global.System.StringComparison.Ordinal) Then
-				Return Me.GetType().Assembly.GetType(String.Concat("XtraGridDataServiceExample.Client.NorthwindGate", typeName.Substring(14)), False)
-			End If
-			Return Nothing
-		End Function
-		''' <summary>
-		''' Since the namespace configured for this service reference
-		''' in Visual Studio is different from the one indicated in the
-		''' server schema, use type-mappers to map between the two.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Protected Function ResolveNameFromType(ByVal clientType As Global.System.Type) As String
-			If clientType.Namespace.Equals("XtraGridDataServiceExample.Client.NorthwindGate", Global.System.StringComparison.Ordinal) Then
-				Return String.Concat("NorthwindModel.", clientType.Name)
-			End If
-			Return Nothing
-		End Function
-		''' <summary>
-		''' There are no comments for Products in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public ReadOnly Property Products() As Global.System.Data.Services.Client.DataServiceQuery(Of Product)
-			Get
-				If (Me._Products Is Nothing) Then
-					Me._Products = MyBase.CreateQuery(Of Product)("Products")
-				End If
-				Return Me._Products
-			End Get
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _Products As Global.System.Data.Services.Client.DataServiceQuery(Of Product)
-		''' <summary>
-		''' There are no comments for Products in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Sub AddToProducts(ByVal product As Product)
-			MyBase.AddObject("Products", product)
-		End Sub
-	End Class
-	''' <summary>
-	''' There are no comments for NorthwindModel.Product in the schema.
-	''' </summary>
-	''' <KeyProperties>
-	''' ProductID
-	''' </KeyProperties>
-	<Global.System.Data.Services.Common.EntitySetAttribute("Products"), Global.System.Data.Services.Common.DataServiceKeyAttribute("ProductID")> _
-	Partial Public Class Product
-		Implements System.ComponentModel.INotifyPropertyChanged
-		''' <summary>
-		''' Create a new Product object.
-		''' </summary>
-		''' <param name="productID">Initial value of ProductID.</param>
-		''' <param name="productName">Initial value of ProductName.</param>
-		''' <param name="discontinued">Initial value of Discontinued.</param>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Shared Function CreateProduct(ByVal productID As Integer, ByVal productName As String, ByVal discontinued As Boolean) As Product
-			Dim product As New Product()
-			product.ProductID = productID
-			product.ProductName = productName
-			product.Discontinued = discontinued
-			Return product
-		End Function
-		''' <summary>
-		''' There are no comments for Property ProductID in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property ProductID() As Integer
-			Get
-				Return Me._ProductID
-			End Get
-			Set(ByVal value As Integer)
-				Me.OnProductIDChanging(value)
-				Me._ProductID = value
-				Me.OnProductIDChanged()
-				Me.OnPropertyChanged("ProductID")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _ProductID As Integer
-		Partial Private Sub OnProductIDChanging(ByVal value As Integer)
-		End Sub
-		Partial Private Sub OnProductIDChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property ProductName in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property ProductName() As String
-			Get
-				Return Me._ProductName
-			End Get
-			Set(ByVal value As String)
-				Me.OnProductNameChanging(value)
-				Me._ProductName = value
-				Me.OnProductNameChanged()
-				Me.OnPropertyChanged("ProductName")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _ProductName As String
-		Partial Private Sub OnProductNameChanging(ByVal value As String)
-		End Sub
-		Partial Private Sub OnProductNameChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property SupplierID in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property SupplierID() As Integer?
-			Get
-				Return Me._SupplierID
-			End Get
-			Set(ByVal value? As Integer)
-				Me.OnSupplierIDChanging(value)
-				Me._SupplierID = value
-				Me.OnSupplierIDChanged()
-				Me.OnPropertyChanged("SupplierID")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _SupplierID? As Integer
-		Partial Private Sub OnSupplierIDChanging(ByVal value? As Integer)
-		End Sub
-		Partial Private Sub OnSupplierIDChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property CategoryID in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property CategoryID() As Integer?
-			Get
-				Return Me._CategoryID
-			End Get
-			Set(ByVal value? As Integer)
-				Me.OnCategoryIDChanging(value)
-				Me._CategoryID = value
-				Me.OnCategoryIDChanged()
-				Me.OnPropertyChanged("CategoryID")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _CategoryID? As Integer
-		Partial Private Sub OnCategoryIDChanging(ByVal value? As Integer)
-		End Sub
-		Partial Private Sub OnCategoryIDChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property QuantityPerUnit in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property QuantityPerUnit() As String
-			Get
-				Return Me._QuantityPerUnit
-			End Get
-			Set(ByVal value As String)
-				Me.OnQuantityPerUnitChanging(value)
-				Me._QuantityPerUnit = value
-				Me.OnQuantityPerUnitChanged()
-				Me.OnPropertyChanged("QuantityPerUnit")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _QuantityPerUnit As String
-		Partial Private Sub OnQuantityPerUnitChanging(ByVal value As String)
-		End Sub
-		Partial Private Sub OnQuantityPerUnitChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property UnitPrice in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property UnitPrice() As Decimal?
-			Get
-				Return Me._UnitPrice
-			End Get
-			Set(ByVal value? As Decimal)
-				Me.OnUnitPriceChanging(value)
-				Me._UnitPrice = value
-				Me.OnUnitPriceChanged()
-				Me.OnPropertyChanged("UnitPrice")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _UnitPrice? As Decimal
-		Partial Private Sub OnUnitPriceChanging(ByVal value? As Decimal)
-		End Sub
-		Partial Private Sub OnUnitPriceChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property UnitsInStock in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property UnitsInStock() As Short?
-			Get
-				Return Me._UnitsInStock
-			End Get
-			Set(ByVal value? As Short)
-				Me.OnUnitsInStockChanging(value)
-				Me._UnitsInStock = value
-				Me.OnUnitsInStockChanged()
-				Me.OnPropertyChanged("UnitsInStock")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _UnitsInStock? As Short
-		Partial Private Sub OnUnitsInStockChanging(ByVal value? As Short)
-		End Sub
-		Partial Private Sub OnUnitsInStockChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property UnitsOnOrder in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property UnitsOnOrder() As Short?
-			Get
-				Return Me._UnitsOnOrder
-			End Get
-			Set(ByVal value? As Short)
-				Me.OnUnitsOnOrderChanging(value)
-				Me._UnitsOnOrder = value
-				Me.OnUnitsOnOrderChanged()
-				Me.OnPropertyChanged("UnitsOnOrder")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _UnitsOnOrder? As Short
-		Partial Private Sub OnUnitsOnOrderChanging(ByVal value? As Short)
-		End Sub
-		Partial Private Sub OnUnitsOnOrderChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property ReorderLevel in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property ReorderLevel() As Short?
-			Get
-				Return Me._ReorderLevel
-			End Get
-			Set(ByVal value? As Short)
-				Me.OnReorderLevelChanging(value)
-				Me._ReorderLevel = value
-				Me.OnReorderLevelChanged()
-				Me.OnPropertyChanged("ReorderLevel")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _ReorderLevel? As Short
-		Partial Private Sub OnReorderLevelChanging(ByVal value? As Short)
-		End Sub
-		Partial Private Sub OnReorderLevelChanged()
-		End Sub
-		''' <summary>
-		''' There are no comments for Property Discontinued in the schema.
-		''' </summary>
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Property Discontinued() As Boolean
-			Get
-				Return Me._Discontinued
-			End Get
-			Set(ByVal value As Boolean)
-				Me.OnDiscontinuedChanging(value)
-				Me._Discontinued = value
-				Me.OnDiscontinuedChanged()
-				Me.OnPropertyChanged("Discontinued")
-			End Set
-		End Property
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Private _Discontinued As Boolean
-		Partial Private Sub OnDiscontinuedChanging(ByVal value As Boolean)
-		End Sub
-		Partial Private Sub OnDiscontinuedChanged()
-		End Sub
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Public Event PropertyChanged As Global.System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-		<System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")> _
-		Protected Overridable Sub OnPropertyChanged(ByVal [property] As String)
-			If (Me.PropertyChangedEvent IsNot Nothing) Then
-				RaiseEvent PropertyChanged(Me, New Global.System.ComponentModel.PropertyChangedEventArgs([property]))
-			End If
-		End Sub
-	End Class
+    ''' <summary>
+    ''' There are no comments for NorthwindEntities in the schema.
+    ''' </summary>
+    Public Partial Class NorthwindEntities
+        Inherits Global.System.Data.Services.Client.DataServiceContext
+
+        ''' <summary>
+        ''' Initialize a new NorthwindEntities object.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Sub New(ByVal serviceRoot As Global.System.Uri)
+            MyBase.New(serviceRoot)
+            Me.ResolveName = New Global.System.Func(Of Global.System.Type, String)(AddressOf Me.ResolveNameFromType)
+            Me.ResolveType = New Global.System.Func(Of String, Global.System.Type)(AddressOf Me.ResolveTypeFromName)
+            OnContextCreated()
+        End Sub
+
+        Partial Private Sub OnContextCreated()
+        End Sub
+
+        ''' <summary>
+        ''' Since the namespace configured for this service reference
+        ''' in Visual Studio is different from the one indicated in the
+        ''' server schema, use type-mappers to map between the two.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Protected Function ResolveTypeFromName(ByVal typeName As String) As Global.System.Type
+            If typeName.StartsWith("NorthwindModel", Global.System.StringComparison.Ordinal) Then
+                Return Me.GetType().Assembly.GetType(String.Concat("XtraGridDataServiceExample.Client.NorthwindGate", typeName.Substring(14)), False)
+            End If
+
+            Return Nothing
+        End Function
+
+        ''' <summary>
+        ''' Since the namespace configured for this service reference
+        ''' in Visual Studio is different from the one indicated in the
+        ''' server schema, use type-mappers to map between the two.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Protected Function ResolveNameFromType(ByVal clientType As Global.System.Type) As String
+            If clientType.Namespace.Equals("XtraGridDataServiceExample.Client.NorthwindGate", Global.System.StringComparison.Ordinal) Then
+                Return String.Concat("NorthwindModel.", clientType.Name)
+            End If
+
+            Return Nothing
+        End Function
+
+        ''' <summary>
+        ''' There are no comments for Products in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public ReadOnly Property Products As Global.System.Data.Services.Client.DataServiceQuery(Of Product)
+            Get
+                If _Products Is Nothing Then
+                    _Products = Me.CreateQuery(Of Product)("Products")
+                End If
+
+                Return _Products
+            End Get
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _Products As Global.System.Data.Services.Client.DataServiceQuery(Of Product)
+
+        ''' <summary>
+        ''' There are no comments for Products in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Sub AddToProducts(ByVal product As Product)
+            Me.AddObject("Products", product)
+        End Sub
+    End Class
+
+    ''' <summary>
+    ''' There are no comments for NorthwindModel.Product in the schema.
+    ''' </summary>
+    ''' <KeyProperties>
+    ''' ProductID
+    ''' </KeyProperties>
+    <Global.System.Data.Services.Common.EntitySetAttribute("Products")>
+    <Global.System.Data.Services.Common.DataServiceKeyAttribute("ProductID")>
+    Public Partial Class Product
+        Implements Global.System.ComponentModel.INotifyPropertyChanged
+
+        ''' <summary>
+        ''' Create a new Product object.
+        ''' </summary>
+        ''' <param name="productID">Initial value of ProductID.</param>
+        ''' <param name="productName">Initial value of ProductName.</param>
+        ''' <param name="discontinued">Initial value of Discontinued.</param>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Shared Function CreateProduct(ByVal productID As Integer, ByVal productName As String, ByVal discontinued As Boolean) As Product
+            Dim product As Product = New Product()
+            product.ProductID = productID
+            product.ProductName = productName
+            product.Discontinued = discontinued
+            Return product
+        End Function
+
+        ''' <summary>
+        ''' There are no comments for Property ProductID in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property ProductID As Integer
+            Get
+                Return _ProductID
+            End Get
+
+            Set(ByVal value As Integer)
+                OnProductIDChanging(value)
+                _ProductID = value
+                OnProductIDChanged()
+                OnPropertyChanged("ProductID")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _ProductID As Integer
+
+        Partial Private Sub OnProductIDChanging(ByVal value As Integer)
+        End Sub
+
+        Partial Private Sub OnProductIDChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property ProductName in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property ProductName As String
+            Get
+                Return _ProductName
+            End Get
+
+            Set(ByVal value As String)
+                OnProductNameChanging(value)
+                _ProductName = value
+                OnProductNameChanged()
+                OnPropertyChanged("ProductName")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _ProductName As String
+
+        Partial Private Sub OnProductNameChanging(ByVal value As String)
+        End Sub
+
+        Partial Private Sub OnProductNameChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property SupplierID in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property SupplierID As Global.System.Nullable(Of Integer)
+            Get
+                Return _SupplierID
+            End Get
+
+            Set(ByVal value As Global.System.Nullable(Of Integer))
+                Me.OnSupplierIDChanging(value)
+                _SupplierID = value
+                OnSupplierIDChanged()
+                OnPropertyChanged("SupplierID")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _SupplierID As Global.System.Nullable(Of Integer)
+
+        Partial Private Sub OnSupplierIDChanging(ByVal value As Global.System.Nullable(Of Integer))
+        End Sub
+
+        Partial Private Sub OnSupplierIDChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property CategoryID in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property CategoryID As Global.System.Nullable(Of Integer)
+            Get
+                Return _CategoryID
+            End Get
+
+            Set(ByVal value As Global.System.Nullable(Of Integer))
+                Me.OnCategoryIDChanging(value)
+                _CategoryID = value
+                OnCategoryIDChanged()
+                OnPropertyChanged("CategoryID")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _CategoryID As Global.System.Nullable(Of Integer)
+
+        Partial Private Sub OnCategoryIDChanging(ByVal value As Global.System.Nullable(Of Integer))
+        End Sub
+
+        Partial Private Sub OnCategoryIDChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property QuantityPerUnit in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property QuantityPerUnit As String
+            Get
+                Return _QuantityPerUnit
+            End Get
+
+            Set(ByVal value As String)
+                OnQuantityPerUnitChanging(value)
+                _QuantityPerUnit = value
+                OnQuantityPerUnitChanged()
+                OnPropertyChanged("QuantityPerUnit")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _QuantityPerUnit As String
+
+        Partial Private Sub OnQuantityPerUnitChanging(ByVal value As String)
+        End Sub
+
+        Partial Private Sub OnQuantityPerUnitChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property UnitPrice in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property UnitPrice As Global.System.Nullable(Of Decimal)
+            Get
+                Return _UnitPrice
+            End Get
+
+            Set(ByVal value As Global.System.Nullable(Of Decimal))
+                Me.OnUnitPriceChanging(value)
+                _UnitPrice = value
+                OnUnitPriceChanged()
+                OnPropertyChanged("UnitPrice")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _UnitPrice As Global.System.Nullable(Of Decimal)
+
+        Partial Private Sub OnUnitPriceChanging(ByVal value As Global.System.Nullable(Of Decimal))
+        End Sub
+
+        Partial Private Sub OnUnitPriceChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property UnitsInStock in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property UnitsInStock As Global.System.Nullable(Of Short)
+            Get
+                Return _UnitsInStock
+            End Get
+
+            Set(ByVal value As Global.System.Nullable(Of Short))
+                Me.OnUnitsInStockChanging(value)
+                _UnitsInStock = value
+                OnUnitsInStockChanged()
+                OnPropertyChanged("UnitsInStock")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _UnitsInStock As Global.System.Nullable(Of Short)
+
+        Partial Private Sub OnUnitsInStockChanging(ByVal value As Global.System.Nullable(Of Short))
+        End Sub
+
+        Partial Private Sub OnUnitsInStockChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property UnitsOnOrder in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property UnitsOnOrder As Global.System.Nullable(Of Short)
+            Get
+                Return _UnitsOnOrder
+            End Get
+
+            Set(ByVal value As Global.System.Nullable(Of Short))
+                Me.OnUnitsOnOrderChanging(value)
+                _UnitsOnOrder = value
+                OnUnitsOnOrderChanged()
+                OnPropertyChanged("UnitsOnOrder")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _UnitsOnOrder As Global.System.Nullable(Of Short)
+
+        Partial Private Sub OnUnitsOnOrderChanging(ByVal value As Global.System.Nullable(Of Short))
+        End Sub
+
+        Partial Private Sub OnUnitsOnOrderChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property ReorderLevel in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property ReorderLevel As Global.System.Nullable(Of Short)
+            Get
+                Return _ReorderLevel
+            End Get
+
+            Set(ByVal value As Global.System.Nullable(Of Short))
+                Me.OnReorderLevelChanging(value)
+                _ReorderLevel = value
+                OnReorderLevelChanged()
+                OnPropertyChanged("ReorderLevel")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _ReorderLevel As Global.System.Nullable(Of Short)
+
+        Partial Private Sub OnReorderLevelChanging(ByVal value As Global.System.Nullable(Of Short))
+        End Sub
+
+        Partial Private Sub OnReorderLevelChanged()
+        End Sub
+
+        ''' <summary>
+        ''' There are no comments for Property Discontinued in the schema.
+        ''' </summary>
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Property Discontinued As Boolean
+            Get
+                Return _Discontinued
+            End Get
+
+            Set(ByVal value As Boolean)
+                OnDiscontinuedChanging(value)
+                _Discontinued = value
+                OnDiscontinuedChanged()
+                OnPropertyChanged("Discontinued")
+            End Set
+        End Property
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Private _Discontinued As Boolean
+
+        Partial Private Sub OnDiscontinuedChanging(ByVal value As Boolean)
+        End Sub
+
+        Partial Private Sub OnDiscontinuedChanged()
+        End Sub
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Public Event PropertyChanged As Global.System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+
+        <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")>
+        Protected Overridable Sub OnPropertyChanged(ByVal [property] As String)
+            RaiseEvent PropertyChanged(Me, New Global.System.ComponentModel.PropertyChangedEventArgs([property]))
+        End Sub
+    End Class
 End Namespace
