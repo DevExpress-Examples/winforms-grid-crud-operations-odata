@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WinForms Data Grid - CRUD operations using OData
+# WinForms Data Grid - CRUD operations (OData)
 
 This example shows how to bind the WinForms Data Grid control to a `BindingSource` that gets data from [OData services](https://www.odata.org).
 
