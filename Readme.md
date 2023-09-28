@@ -51,6 +51,6 @@ End Sub
 * [Order.cs](./CS/DxSample.Service/Models/Order.cs) (VB: [Order.vb](./VB/DxSample.Service/Models/Order.vb))
 
 
-## Documentaion
+## Documentation
 
 * [Data Binding - WinForms Data Grid](https://docs.devexpress.com/WindowsForms/634/controls-and-libraries/data-grid/data-binding)
